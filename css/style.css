@@ -1,0 +1,210 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* CSS Variables */
+:root {
+    --lightdark: #555;
+    --themecolor: #dfc9c1;
+    --primary: #f3f3f3;
+    --Dark: #732002;
+    --secondary: #e67e22;;
+    --average: #d95204;
+     --shadow: 1px solid rgba(255, 255, 255, 0.10);
+     --grey: rgba(104, 104, 104, 0.8);
+    }
+
+
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    background: var(--themecolor);
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #745b59;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+.main {
+    margin: 0 auto;
+    display: block;
+    margin-top: 60px;
+}
+.mainkat{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainkat div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, #745b59 0%, #8a4a43 100%);
+}
+.sidebarMInner{
+    margin:0;
+    padding:0;
+    border-top: var(--shadow);
+}
+.sidebarMInner li{
+    list-style: none;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: var(--shadow);
+}
+.sidebarMInner li span{
+    display: block;
+    font-size: 14px;
+    color: var(--primary);
+}
+.sidebarMInner li a{
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary);
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+.drumk:hover {
+    animation: line-grow ease-out 500ms;
+    transform-origin: 50% 50%;
+    }
+    
+    @keyframes line-grow {
+    0% { transform: scaleX(1) }
+    50% { transform: scaleX(1.02) }
+    100% { transform: scaleX(1) }
+    }
+
+    .mainInner {
+        height: 1.5rem;
+        background: #333;
+    }
+
+       ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      footer {
+        background-color: #555;
+        color: #bbb;
+        line-height: 1.5;
+      }
+      footer a {
+        text-decoration: none;
+        color: #eee;
+      }
+    /* Footer legal */
+.footer-legal {
+    padding: 0.9375rem 1.875rem;
+    background-color: #333;
+  }
+  .footer-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-legal-list li {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+  }
+  /* one before the last child */
+  .footer-legal-list li:nth-last-child(2) {
+      flex: 1;
+  }
